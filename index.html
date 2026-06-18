@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Picker</title>
+</head>
+<body>
+
+    <h1>Color Picker</h1>
+
+    <input type="color" id="picker">
+
+    <p id="code">#000000</p>
+
+    <script>
+        const picker = document.getElementById("picker");
+        const code = document.getElementById("code");
+
+        picker.addEventListener("input", function() {
+            code.innerText = picker.value;
+            document.body.style.backgroundColor = picker.value;
+        });
+    </script>
+
+</body>
+</html>
